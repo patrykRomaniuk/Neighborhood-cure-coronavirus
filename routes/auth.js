@@ -6,6 +6,21 @@ const config = require('config');
 const bcryptjs = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const router = express.Router();
+const auth = require('../middleware/auth');
+
+router.get(
+    '/user',
+    auth,
+    async(req,res) => {
+        try {
+            const user = await User.findById(req.user.id).select('-password');
+            res.json(user);
+        } catch (error) {
+            console.log(error.message);
+            return res.status(500).json({ msg: "Server Error..." });
+        }
+    }
+)
 
 router.post(
     '/register',
@@ -49,7 +64,7 @@ router.post(
               //  avatar
             });
 
-            const salt = await bcryptjs.genSalt(15);
+            const salt = await bcryptjs.genSalt(10);
 
             user.password = await bcryptjs.hash(password,salt);
 
