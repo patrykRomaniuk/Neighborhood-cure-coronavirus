@@ -8,6 +8,7 @@ import Register from './pages/Register.jsx';
 import { Provider } from 'react-redux';
 import store from './store';
 import setAuthToken from './middleware/setAuthToken';
+import Navbar from './components/Navbar';
 
 if(localStorage.getItem('token')){
   setAuthToken(localStorage.getItem('token'));
@@ -22,12 +23,13 @@ const App = () => {
   return (
     <Provider store={ store }>
       <Router>
-        <Switch>
-          <Route exact path="/" component={ Landing }/>
-          <Route exact path="/login" component={ Login }/>
-          <Route exact path="/register" component={ Register }/>
-          <Route component={ ErrorPage }/>
-        </Switch>
+        <Navbar/>
+          <Switch>
+            <Route exact path="/" component={ Landing }/>
+            <Route exact path="/login" component={ Login }/>
+            <Route exact path="/register" component={ Register }/>
+            <Route component={ ErrorPage }/>
+          </Switch>
       </Router>
     </Provider>
   )
