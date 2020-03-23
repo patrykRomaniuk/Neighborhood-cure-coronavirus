@@ -1,0 +1,77 @@
+@import '../functions.scss';
+@import '../../variables/variables.scss';
+
+@mixin nav{
+    width: 100vw;
+    height: 10vh;   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+}
+
+@mixin logo(){
+    @include flexCenter();
+    width: 60%;
+    height: 100%;
+    color: $mainBlueColor;
+    font-family: $montSerrat;
+    @media(min-width: 1024px){
+        width: 25%;
+    }
+}
+
+@mixin navbarLinks(){
+    display: none;
+    width: 0vw;
+    height: 0vh;
+     @media(min-width: 1024px){
+         width: 70%;
+        height: 100%;
+        @include alignCenterJustifyAround();
+    }
+    a{
+        font-family: $montSerrat;
+        color: $mainDark;
+        text-decoration: none;
+        &:hover{
+            color: $purpleLight;
+            }
+        }
+}
+
+@mixin hamburger(){
+    @include flexCenter();
+    font-size: 1.4em;
+    width: 40%;
+    height: 100%;
+    color: $mainDark;
+    @media(min-width:1024px){
+        display: none;
+        width: 0vw;
+        height: 0vh;
+    }
+}
+
+@mixin responsiveNavbarWrapper(){
+    @include flexCenter();
+    flex-direction: column;                
+    position: fixed;
+    width: 100vw;
+    height: 90vh;
+    background: #2c3e50;
+    top: 80px;
+    transition: all .5;
+    @media(min-width: 1024px){
+        z-index: -1;
+        display: none;
+    }
+    a{
+        margin: 1em 0;
+        font-size: 1.4em;
+        font-family: $montSerrat;
+        color: $mainWhite;
+        text-decoration: none;
+    }
+}

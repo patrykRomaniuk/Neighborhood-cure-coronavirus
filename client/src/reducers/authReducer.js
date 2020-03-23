@@ -3,7 +3,13 @@ import {
     AUTH_FORM_SUCCESS,
     LOG_OUT,
     AUTH_ERROR,
-    USER_LOADED
+    USER_LOADED,
+    GET_USER_BY_ID,
+    CHANGE_PASSWORD,
+    REJECTED_CHANING_USER_DATA,
+    ADD_DESCRIPTION,
+    REMOVE_USER_DESCRIPTION,
+    DELETE_USER
 } from '../actions/constants';
 
 const initialState = {
@@ -17,6 +23,10 @@ const initialState = {
 const auth = (state = initialState, action) => {
     const { type,payload } = action;
     switch(type){
+        case CHANGE_PASSWORD:
+        case DELETE_USER:
+            alert(payload);
+            break;
         case AUTH_FORM_SUCCESS:
             localStorage.setItem('token',payload.token);
             return {
@@ -25,7 +35,15 @@ const auth = (state = initialState, action) => {
                 isLoading: false,
                 error: {}
             }
+        case GET_USER_BY_ID:
+            return {
+                ...state,
+                user: payload
+            }
         case USER_LOADED:
+        case ADD_DESCRIPTION:
+        case REMOVE_USER_DESCRIPTION:
+            localStorage.setItem('userLocation',payload.location.city)
             localStorage.getItem('token');
             return {
                 ...state,
@@ -50,6 +68,11 @@ const auth = (state = initialState, action) => {
                 user: null,
                 isAuthenticated: false,
                 isLoading: true,
+                error: payload
+            }
+        case REJECTED_CHANING_USER_DATA:
+            return {
+                ...state,
                 error: payload
             }
         default:

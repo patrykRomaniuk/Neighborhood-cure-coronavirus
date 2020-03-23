@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "singleTaskPageStyles.scss"
+    ],
+    "names": [],
+    "file": "singleTaskPageStyles.css"
+}

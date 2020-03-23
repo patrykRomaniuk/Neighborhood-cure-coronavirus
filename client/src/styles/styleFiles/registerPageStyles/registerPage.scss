@@ -1,0 +1,49 @@
+@mixin registerPage(){
+    .register-page-wrapper{
+        width: 100vw;
+        min-height: 100vh;
+        @include flexCenter();
+        flex-direction: column;
+        header{
+            margin-top: 5.25em;
+            margin-bottom: 2em;
+           @include loginRegisterHeader();
+           font-family: $montSerrat;
+        }
+        .register-inputs-wrapper{
+            width: 85%;
+            font-family: $montSerrat;
+            color: $mainDark;
+            @include flexCenter();
+            flex-direction: column;
+            @media(min-width: 1024px){
+                width: 30%;
+                display: grid;
+                grid-template-columns: 1fr 1fr .5fr 1fr 1fr;
+            }
+            .input{
+                width: 80%;
+                @media(min-width: 1024px){
+                    width: 100%;
+                }
+                @include formInput();
+            }
+            .first-input{ grid-column: 1/3; }
+            .second-input{ grid-column: 4/6; }
+            .third-input{ grid-column: 1/6; }
+            .fourth-input{ grid-column: 1/6; }  
+            .fifth-input{ grid-column: 1/6; }
+            .sixth-input{ grid-column: 1/3; }
+            .seventh-input{ grid-column: 4/6; }
+            .eight-input{ grid-column: 1/6; }
+            .nineth-input{ grid-column: 1/6; }
+            .tenth-input{ grid-column: 1/6; }
+        }
+
+        .register-button{
+            font-family: $montSerrat !important;
+            padding: .75em 1.2em !important;
+            @include mainBlueButton();
+        }
+    }
+}

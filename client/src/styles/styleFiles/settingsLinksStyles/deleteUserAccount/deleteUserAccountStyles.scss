@@ -1,0 +1,27 @@
+@mixin deleteUserAccount(){
+    .delete-user-account{
+        @include flexCenter();
+        @include fullScreen();
+        flex-direction: column;
+        font-family: $montSerrat;
+        header{
+            width: 100%;
+            text-align: center;
+            margin-bottom: 1.5em;
+            h1{
+                font-weight: bold;
+                font-size: 3em;
+                color: $mainBlueColor;
+            }
+        }
+        .confirm-wrapper{
+            width: 100%;
+            @include flexCenter();
+            .confirm-button{
+                text-align: center;
+                padding: .75em !important;
+                @include mainButton(#c4302b,#cf5a56,$mainWhite);
+            }
+        }
+    }
+}

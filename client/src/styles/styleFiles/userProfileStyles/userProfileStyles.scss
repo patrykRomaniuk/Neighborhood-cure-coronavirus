@@ -1,0 +1,103 @@
+@mixin userProfileStyles(){
+    .user-profile-page-wrapper{
+        width: 100vw;
+        min-height: 100vh;
+        @include flexCenter();
+        flex-direction: column;
+        font-family: $montSerrat;
+        margin-top: 8em;
+        .image-date-section{
+            width: 60%;
+            display: grid;
+            grid-template-columns: 100%;
+            @media(min-width: 1024px){
+                grid-template-columns: 70% 30%;
+            }
+        }
+        .basic-user-data{
+            @include profileUserData();
+        }
+        .contact-user-data{
+            margin: 1em 0;
+            @include profileUserData();
+        }
+        .description-section{
+            @include profileUserData();
+
+            header{
+                color: $mainBlueColor;
+            }
+
+            .user-has-description{
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                flex-direction: column;
+                .remove-description-button{
+                    text-align: center;
+                    padding: .5em !important;
+                    @include mainButton(#c4302b,#cf5a56,$mainWhite);
+                }
+                .edit-description-button{
+                    text-align: center;
+                    padding: .5em !important;
+                    @include mainButton($mainGray,#ece1e1,$mainDark);
+                }
+                textarea{
+                    width: 80vw;
+                }
+            }
+
+            .description-text{
+                width: 100%;
+                .description-btn{
+                    width: 100%;
+                    @include mainBlueButton();
+                    @media(min-width: 1024px){
+                        width: 25%;
+                    }
+                }
+            }
+        }
+
+        .user-tasks-wrapper{
+            margin-top: 3em;
+            width: 80%;
+            @include flexCenter();
+            flex-direction: column;
+            header{
+                text-align: center;
+                margin-bottom: 1em;
+                h1{
+                    color: $mainBlueColor;
+                }
+            }
+            .user-task{
+                @include flexCenter();
+                flex-direction: column;
+                width: 100%;
+                border: 2px solid $mainGray;
+                padding: 1.5em 0;
+                .user-task-buttons{
+                    width: 40%;
+                    display: flex;
+                    justify-content: space-around;
+                    flex-direction: column;
+                    @media(min-width: 1024px){
+                        flex-direction: row;
+                    }
+                    .user-task-delete-btn{
+                        text-align: center;
+                        padding: .5em !important;
+                        @include mainButton(#c4302b,#cf5a56,$mainWhite);
+                    }
+                    .user-task-edit-btn{
+                        text-align: center;
+                        padding: .5em !important;
+                        @include mainButton($mainGray,#ece1e1,$mainDark);
+                    }
+                }
+            }
+        }
+    }
+}

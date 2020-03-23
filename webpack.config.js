@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        main: './client/src/sum.js'
+       // main: './client/src/sum.js'
     },
     output: {
         filename: 'main.js',

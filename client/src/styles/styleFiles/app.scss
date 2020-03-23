@@ -1,0 +1,56 @@
+@import '../functions/functions.scss';
+@import '../functions/navbarFunctions/navbarFunctions.scss';
+@import './loginPageStyles/loginPage.scss';
+@import './registerPageStyles/registerPage.scss';
+@import './singleTaskPageStyles/singleTaskPageStyles.scss';
+@import './addMapPostStyles/addMapPostStyles.scss';
+@import './settingsPageStyles/settingPageStyles.scss';
+@import './settingsLinksStyles/changePasswordStyles/changePasswordStyles.scss';
+@import './userProfileStyles/userProfileStyles.scss';
+@import './mapPageStyles/mapPageStyles.scss';
+@import './settingsLinksStyles/deleteUserAccount/deleteUserAccountStyles.scss';
+@import '../functions/footerFunctions.js/footerFunctions.scss';
+
+*{
+    @include basicPageStylingRemove();
+    body{
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+        nav{
+        @include nav();
+
+            .logo{ @include logo(); }
+
+            .navbar-links{ @include navbarLinks(); }
+
+            .hamburger{ @include hamburger(); }
+
+            .responsive-navbar-wrapper{ @include responsiveNavbarWrapper(); }
+        }
+
+        @include loginPage();
+
+        @include registerPage();
+
+        @include singleTaskPage();
+
+        @include addMapPost();
+
+        @include settingsPage();
+
+        @include changePasswordStyles();
+
+        @include userProfileStyles();
+      
+        @include mapPageStyles();
+
+        .popup-btn{
+            @include mainBlueButton();
+        }
+
+        @include deleteUserAccount();
+
+        @include footer();
+    }   
+}

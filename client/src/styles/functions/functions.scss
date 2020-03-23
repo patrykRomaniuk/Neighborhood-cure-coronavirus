@@ -1,0 +1,107 @@
+@import '../variables/variables.scss';
+
+@mixin basicPageStylingRemove{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin alignCenterJustifyAround{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin fullScreen{
+    width: 100vw;
+    height: 100vh;
+} 
+
+@mixin divideSectionoOn50(){
+    display: grid;
+    grid-template-columns: 1fr;
+    @media(min-width: 1024px){
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@mixin loginRegisterHeader(){
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 80vw;
+        @media(min-width: 1024px){
+            width: 100vw;
+        }
+        h1{
+            font-size: 1.8em;
+            margin-bottom: .5em;
+            color: $mainBlueColor;
+        }
+        p{
+            color: $mainDark;
+        }
+}
+
+@mixin mainBlueButton(){
+    background: $mainBlueColor;
+    @include flexCenter();
+    color: $mainWhite;
+    transition: background .2s ease-in-out;
+    margin-top: 1em;
+    padding: .4em 0;
+    font-weight: bold;
+    font-size: 1.15em;
+    border-radius: 3px;
+    &:hover{
+        background: $mainGray;
+        cursor: pointer;
+    }
+}
+
+@mixin mainButton($unHoveredBackground, $hoveredBackground, $color){
+    background: $unHoveredBackground;
+    @include flexCenter();
+    color: $color;
+    transition: background .2s ease-in-out;
+    margin-top: 1em;
+    padding: .4em 0;
+    font-weight: bold;
+    font-size: 1.15em;
+    border-radius: 3px;
+    &:hover{
+        background: $hoveredBackground;
+        cursor: pointer;
+    }
+}
+
+@mixin formInput(){
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    &:last-child{
+        margin-bottom: 0em;
+    }
+    label{
+        text-align: left;
+        color: $mainDark;
+    }
+    input{
+        box-shadow: 1px 2px 4px rgba(0,0,0,.03);
+        padding: .45em;
+        border-radius: 5px;
+    }
+}
+
+@mixin profileUserData(){
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}

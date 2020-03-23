@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AEAA,OAAO,CAAC,6EAAI;AAAZ,OAAO,CAAC,6EAAI",
+    "sources": [
+        "navbarFunctions.scss",
+        "../functions.scss",
+        "../../variables/variables.scss",
+        "../../variables/variables.scss"
+    ],
+    "names": [],
+    "file": "navbarFunctions.css"
+}

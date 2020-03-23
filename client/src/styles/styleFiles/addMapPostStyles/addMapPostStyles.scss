@@ -1,0 +1,33 @@
+@mixin addMapPost(){
+    .add-task-wrapper{
+        @include flexCenter();
+        @include fullScreen();
+        flex-direction: column;
+        font-family: $montSerrat;
+        header{
+            margin-bottom: 1em;
+            color: $mainBlueColor;
+            width: 60%;
+            @include flexCenter();
+        }
+        .inputs-wrapper{
+            width: 80%;
+            @include flexCenter();
+            flex-direction: column;
+            @media(min-width: 1024px){
+                width: 40%;
+            }
+            .input{
+                width: 100%;
+                @include formInput();
+            }
+        }
+        .add-map-post-btn{
+            width: 80%;
+            @include mainBlueButton();
+            @media(min-width: 1024px){
+                width: 20%;
+            }
+        }
+    }
+}
