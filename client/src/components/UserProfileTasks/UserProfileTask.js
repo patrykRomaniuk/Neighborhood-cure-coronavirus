@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { deleteTaskByID } from '../../actions/tasks';
 import howManyDaysPassedInHours from '../../functions/howManyDaysPassedInHours';
 
@@ -21,10 +22,10 @@ const UserProfileTask = ({ task,deleteTaskByID }) => {
                 }}>
                     Delete task
                 </div>
-                <div className="user-task-edit-btn" onClick={() => {
-                    deleteTaskByID(task._id);
-                }}>
-                    Edit task
+                <div className="user-task-edit-btn">
+                    <Link to={`/edit-task/${task._id}`}>
+                        Edit task
+                    </Link>
                 </div>
             </div>
         </div>

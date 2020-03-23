@@ -4,6 +4,7 @@ module.exports.changeTaskDescription = async (req,res) => {
     try {
         const taskIdToChangeDescription = req.params.task_id;
         const { newDescription } = req.body;
+        console.log(taskIdToChangeDescription)
         let userTask = await Task.findById(taskIdToChangeDescription);
         if(req.user.id.toString() === userTask.user.toString()){
             userTask.description = newDescription;

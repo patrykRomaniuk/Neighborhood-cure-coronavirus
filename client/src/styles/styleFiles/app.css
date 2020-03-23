@@ -1587,6 +1587,50 @@
   cursor: pointer;
 }
 
+* body .edit-task-description-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+* body .edit-task-description-wrapper .edit-task-button {
+  background: #39c6f1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fcf8f8;
+  -webkit-transition: background .2s ease-in-out;
+  transition: background .2s ease-in-out;
+  margin-top: 1em;
+  padding: .4em 0;
+  font-weight: bold;
+  font-size: 1.15em;
+  border-radius: 3px;
+}
+
+* body .edit-task-description-wrapper .edit-task-button:hover {
+  background: #d7d6d8;
+  cursor: pointer;
+}
+
 * body footer {
   padding: 2em 0;
   display: -webkit-box;

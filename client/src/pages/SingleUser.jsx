@@ -8,7 +8,7 @@ const SingleUser = ({ match,getUserByID }) => {
     },[])
     return (
         <div>
-            
+            a
         </div>
     )
 }

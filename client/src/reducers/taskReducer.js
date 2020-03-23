@@ -6,7 +6,8 @@ import {
     SELECTED_TASK,
     GET_TASK_BY_ID,
     GET_USER_LOCATION_TASKS,
-    DELETE_TASK_BY_ID
+    DELETE_TASK_BY_ID,
+    EDIT_TASK
 } from '../actions/constants';
 
 const initialState = {
@@ -44,6 +45,7 @@ const taskReducer = (state = initialState, action) => {
                 tasks: payload
             }
         case DELETE_TASK_BY_ID:
+        case EDIT_TASK:
                 alert(payload)
         case TASK_ERROR:
             return {

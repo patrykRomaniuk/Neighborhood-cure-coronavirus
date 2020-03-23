@@ -6,7 +6,6 @@ import { getTasks,changeIsSelected,getTaskByID,getUserLocationTasks } from '../a
 import { connect } from 'react-redux';
 import LocationTasksWrapper from '../components/LocationTasks/LocationTasksWrapper';
 import Loader from 'react-loader';
-import moment from 'moment';
 
 const Map = ({ taskReducer: { tasks,locationTasks },auth,getTasks,getUserLocationTasks }) => {
 

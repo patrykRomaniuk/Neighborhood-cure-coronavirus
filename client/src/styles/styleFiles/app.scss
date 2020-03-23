@@ -51,6 +51,15 @@
 
         @include deleteUserAccount();
 
+        .edit-task-description-wrapper{
+            @include fullScreen();
+            @include flexCenter();
+            flex-direction: column;
+            .edit-task-button{
+                @include mainBlueButton();
+            }
+        }
+
         @include footer();
     }   
 }

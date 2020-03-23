@@ -18,6 +18,7 @@ import SingleTaskPage from './pages/SingleTaskPage';
 import SingleUser from './pages/SingleUser';
 import ChangePassword from './pages/settings/ChangePassword';
 import DeleteUserAccount from './pages/settings/DeleteUserAccount';
+import EditTask from './pages/EditTask';
 import './styles/styleFiles/app.css';
 
 if(localStorage.getItem('token')){
@@ -46,6 +47,7 @@ const App = () => {
             <Route exact path="/delete-user" component={ DeleteUserAccount }/>
             <Route exact path="/task/:task_id" component={ SingleTaskPage }/>
             <Route exact path="/user/:user_id" component={ SingleUser }/>
+            <Route exact path="/edit-task/:task_id" component={ EditTask }/>
             <Route component={ ErrorPage }/>
           </Switch>
         <Footer/>

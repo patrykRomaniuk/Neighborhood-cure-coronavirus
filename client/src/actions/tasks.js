@@ -7,11 +7,12 @@ import {
     SELECTED_TASK,
     GET_TASK_BY_ID,
     GET_USER_LOCATION_TASKS,
-    DELETE_TASK_BY_ID
+    DELETE_TASK_BY_ID,
+    EDIT_TASK
 } from './constants';
 import axios from 'axios';
 
-export const addTask = (formData) => async dispatch => {
+export const addTask = formData => async dispatch => {
     try {
 
         const config = {
@@ -88,9 +89,20 @@ export const getUserLocationTasks = userLocation => async dispatch => {
     }
 }
 
-export const editTask = task_id => async dispatch => {
+export const editTask = (newDescription, task_id) => async dispatch => {
     try {
-        
+        const config = {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        };
+        const body = JSON.stringify({ newDescription });
+
+        const response =  await axios.put(`http://localhost:5000/api/tasks/changeTaskDescription/${task_id}`,body,config);
+        dispatch({
+            type: EDIT_TASK,
+            payload: response.data
+        });
     } catch (error) {
         dispatch({ type: TASK_ERROR, payload: error });
     }
