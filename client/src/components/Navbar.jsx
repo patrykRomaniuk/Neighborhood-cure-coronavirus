@@ -11,7 +11,7 @@ const Navbar = ({ auth: { isAuthenticated }, logOut }) => {
         <nav>
 
             <div className="logo">
-                Logo
+                <Link to="/">NeighborlyHelp</Link>                
             </div>
 
             <div className="navbar-links">
@@ -31,16 +31,16 @@ const Navbar = ({ auth: { isAuthenticated }, logOut }) => {
                     display: isSidebar ? 'none' : 'block'
                 }}
                 className="fa fa-bars" 
-                onClick={() => {
-                    setSidebar(true);
-                }}></i>
+                onClick={() => setSidebar(true) }>
+                </i>
 
                 <i 
                 style={{ 
                     display: isSidebar ? 'block' : 'none'
                 }}
                 className="fa fa-times" 
-                onClick={() => setSidebar(false) }></i>
+                onClick={() => setSidebar(false) }>
+                </i>
 
             </div>
 
@@ -58,7 +58,9 @@ const Navbar = ({ auth: { isAuthenticated }, logOut }) => {
                 <Link style={{ display: isAuthenticated ? 'block' : 'none' }} onClick={() => {
                     setSidebar(false)
                     logOut()
-                }} to="/login">Log Out</Link>
+                }} to="/login">
+                    Log Out
+                </Link>
                 <Link style={{ display: !isAuthenticated ? 'block' : 'none' }} onClick={() => setSidebar(false)} to="/login">Login</Link>
                 <Link style={{ display: !isAuthenticated ? 'block': 'none' }} onClick={() => setSidebar(false)} to="/register">Register</Link>
             </div>                

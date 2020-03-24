@@ -15,10 +15,16 @@
     @include flexCenter();
     width: 60%;
     height: 100%;
-    color: $mainBlueColor;
-    font-family: $montSerrat;
+    font-size: 1.15em;
+    padding-left: .25em;
     @media(min-width: 1024px){
+        font-size: 1.3em;
         width: 25%;
+    }
+    a{
+        text-decoration: none;
+        color: $mainBlueColor;
+        font-family: $montSerrat;
     }
 }
 
