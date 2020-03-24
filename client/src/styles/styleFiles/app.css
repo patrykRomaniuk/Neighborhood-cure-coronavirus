@@ -1332,6 +1332,11 @@
   cursor: pointer;
 }
 
+* body .user-profile-page-wrapper .user-tasks-wrapper .user-task .user-task-buttons .user-task-edit-btn a {
+  color: #0c0c0c;
+  text-decoration: none;
+}
+
 * body .map-page-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;

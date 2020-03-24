@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { loadUser } from './actions/auth';
+import { loadUser } from './actions/auth/loadUser';
 import ErrorPage from './pages/ErrorPage.jsx';
 import Landing from './pages/Landing.jsx';
 import Login from './pages/authForms/Login.jsx';

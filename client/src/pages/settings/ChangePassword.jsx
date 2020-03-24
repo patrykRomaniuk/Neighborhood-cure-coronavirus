@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { changePassword } from '../../actions/auth';
+import { changePassword } from '../../actions/auth/changePassword';
 
 const ChangePassword = ({ changePassword }) => {
 

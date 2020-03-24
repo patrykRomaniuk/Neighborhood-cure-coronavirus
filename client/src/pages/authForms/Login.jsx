@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Redirect,Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { loginUser } from '../../actions/auth';
+import { loginUser } from '../../actions/auth/loginUser';
 
 const Login = ({ auth: { isAuthenticated },loginUser }) => {
 
@@ -24,7 +24,7 @@ const Login = ({ auth: { isAuthenticated },loginUser }) => {
     const onSubmit = e => {
         e.preventDefault();
         if(email !== '' && password !== '')
-        loginUser(formData);
+            loginUser(formData);
         else 
             return alert('Email or password are invalid');
     }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { logOut } from '../actions/auth';
+import { logOut } from '../actions/auth/logOut';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 

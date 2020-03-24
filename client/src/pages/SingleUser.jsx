@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { getUserByID } from '../actions/auth';
+import { getUserByID } from '../actions/auth/getUserByID';
 import { connect } from 'react-redux';
  
 const SingleUser = ({ match,getUserByID }) => {

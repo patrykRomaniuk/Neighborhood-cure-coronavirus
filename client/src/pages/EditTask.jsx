@@ -3,10 +3,8 @@ import { connect } from 'react-redux';
 import { editTask } from '../actions/tasks';
 
 const EditTask = ({ editTask,match }) => {
-    
-    let [newDescription,setNewDescription] = useState('');
 
-    const onChange = e => setNewDescription(e.target.value); 
+    let [newDescription,setNewDescription] = useState('');
 
     const onSubmit = () => {
         if(newDescription.indexOf(' ') <= 0)
@@ -18,6 +16,16 @@ const EditTask = ({ editTask,match }) => {
         editTask(newDescription,match.params.task_id);
         alert("Congratulations! You have changed task")
     }
+
+    useEffect(() => {
+        const listenter = e => {
+            if(e.key === 'Enter')
+                onSubmit(e)
+        }
+        window.addEventListener('keydown',listenter);
+    },[])
+
+    const onChange = e => setNewDescription(e.target.value); 
 
     return (
         <div className="edit-task-description-wrapper">

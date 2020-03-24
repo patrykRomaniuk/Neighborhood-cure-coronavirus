@@ -1,6 +1,6 @@
 import { USER_LOADED, AUTH_ERROR } from '../constants';
 import axios from 'axios';
-import setAuthToken from '../middleware/setAuthToken';
+import setAuthToken from '../../middleware/setAuthToken';
 
 export const loadUser = () => async dispatch => {
     if(localStorage.getItem('token')){

@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { removeUserAccount } from '../../actions/auth';
+import { removeUserAccount } from '../../actions/auth/removeUserAccount';
 import { Redirect } from 'react-router-dom';
 
 const DeleteUserAccount = ({ removeUserAccount, auth }) => {
