@@ -1,9 +1,14 @@
 @mixin addMapPost(){
     .add-task-wrapper{
+        margin-top: 6em;
         @include flexCenter();
-        @include fullScreen();
+        width: 100vw;
+        min-height: 100vh;
         flex-direction: column;
         font-family: $montSerrat;
+        @media(min-width: 1024px){
+            margin-top: 3em;
+        }
         header{
             margin-bottom: 1em;
             color: $mainBlueColor;
@@ -20,6 +25,14 @@
             .input{
                 width: 100%;
                 @include formInput();
+                textarea{
+                    width: 100%;
+                    height: 30vh;
+                    resize: none;
+                    @media(min-width: 1024px){
+                        height: 20vh;
+                    }
+                }
             }
         }
         .add-map-post-btn{

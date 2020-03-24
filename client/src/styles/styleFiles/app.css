@@ -672,6 +672,7 @@
 }
 
 * body .add-task-wrapper {
+  margin-top: 6em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -682,12 +683,18 @@
       -ms-flex-align: center;
           align-items: center;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   font-family: "MontSerrat", "sans-serif";
+}
+
+@media (min-width: 1024px) {
+  * body .add-task-wrapper {
+    margin-top: 3em;
+  }
 }
 
 * body .add-task-wrapper header {
@@ -754,6 +761,18 @@
           box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.03);
   padding: .45em;
   border-radius: 5px;
+}
+
+* body .add-task-wrapper .inputs-wrapper .input textarea {
+  width: 100%;
+  height: 30vh;
+  resize: none;
+}
+
+@media (min-width: 1024px) {
+  * body .add-task-wrapper .inputs-wrapper .input textarea {
+    height: 20vh;
+  }
 }
 
 * body .add-task-wrapper .add-map-post-btn {

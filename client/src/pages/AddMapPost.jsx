@@ -5,10 +5,10 @@ import { addTask } from '../actions/tasks/postActions/addTask';
 
 const AddMapPost = ({ auth: { isAuthenticated },addTask }) => {
 
-    if(!isAuthenticated){
+   /* if(!isAuthenticated){
         alert("You are not logged in!");
         return <Redirect to="/login"/>
-    }
+    }*/
 
     let [formData,setFormData] = useState({
         description: '',
@@ -44,7 +44,7 @@ const AddMapPost = ({ auth: { isAuthenticated },addTask }) => {
                 <div className="inputs-wrapper">
                     <div className="input">
                         <h3>Description</h3>
-                        <input name="description" value={ description } onChange={(e) => onChange(e)}  type="text"/>
+                        <textarea name="description" value={ description } onChange={(e) => onChange(e)}  type="text"/>
                         <p>Number of characters: { description.length }, (max is 250)</p>
                     </div>
                     <div className="input">
