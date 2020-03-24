@@ -33,6 +33,7 @@ const EditTask = ({ editTask,match }) => {
                 <h1>Change task description</h1>
             </header>
             <textarea 
+                className="edit-task-input"
                 value={ newDescription }
                 onChange={e => onChange(e)}
             />

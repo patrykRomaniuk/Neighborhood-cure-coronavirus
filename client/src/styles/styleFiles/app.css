@@ -1608,9 +1608,33 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-family: "MontSerrat", "sans-serif";
+}
+
+* body .edit-task-description-wrapper header {
+  text-align: center;
+  margin-bottom: .5em;
+}
+
+* body .edit-task-description-wrapper header h1 {
+  color: #39c6f1;
+}
+
+* body .edit-task-description-wrapper .edit-task-input {
+  margin: .75em 0;
+  width: 60%;
+  height: 30%;
+  resize: none;
+}
+
+@media (min-width: 1024px) {
+  * body .edit-task-description-wrapper .edit-task-input {
+    width: 50%;
+  }
 }
 
 * body .edit-task-description-wrapper .edit-task-button {
+  padding: .75em !important;
   background: #39c6f1;
   display: -webkit-box;
   display: -ms-flexbox;
