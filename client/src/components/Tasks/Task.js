@@ -1,7 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Marker } from 'react-map-gl';
-import { changeIsSelected,getTaskByID ,deleteTaskByID } from '../../actions/tasks';
+import { changeIsSelected } from '../../actions/tasks/changeIsSelected';
+import { deleteTaskByID } from '../../actions/tasks/deleteActions/deleteTaskByID';
+import { getTaskByID } from '../../actions/tasks/getActions/getActions'
 import howManyDaysPassedInHours from '../../functions/howManyDaysPassedInHours';
 
 const Task = ({ task, setSelectedTask }) => {

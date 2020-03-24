@@ -1,13 +1,14 @@
 import React from 'react';
 import Moment from 'react-moment';
 import { Link } from 'react-router-dom';
-import { deleteTaskByID } from '../../actions/tasks';
+import { deleteTaskByID } from '../../actions/tasks/deleteActions/deleteTaskByID';
 import { connect } from 'react-redux';
 import howManyDaysPassedInHours from '../../functions/howManyDaysPassedInHours';
 
 const LocationTask = ({ task, deleteTaskByID }) => {
 
-    if(howManyDaysPassedInHours(task.createdAt) >= 3){
+    if(howManyDaysPassedInHours(task.createdAt) >= 2){
+        alert("2 hours passed, so I'm removing this task");
         deleteTaskByID(task._id);
     }
 

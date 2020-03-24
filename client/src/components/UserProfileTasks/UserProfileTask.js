@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { deleteTaskByID } from '../../actions/tasks';
+import { deleteTaskByID } from '../../actions/tasks/deleteActions/deleteTaskByID';
 import howManyDaysPassedInHours from '../../functions/howManyDaysPassedInHours';
 
 const UserProfileTask = ({ task,deleteTaskByID }) => {

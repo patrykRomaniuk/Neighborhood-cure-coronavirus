@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from 'react';
 import { connect } from 'react-redux';
-import { editTask } from '../actions/tasks';
+import { editTask } from '../actions/tasks/putActions/editTask';
 
 const EditTask = ({ editTask,match }) => {
 

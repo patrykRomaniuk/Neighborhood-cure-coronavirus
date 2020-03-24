@@ -2,7 +2,7 @@ import React,{ useState,useEffect } from 'react';
 import Moment from 'react-moment';
 import { removeDescription } from '../actions/auth/removeDescription';
 import { addDescription } from '../actions/auth/addDescription';
-import { getUserTasks } from '../actions/tasks';
+import { getUserTasks } from '../actions/tasks/getActions/getActions';
 import { connect } from 'react-redux';
 import UserProfileTasksWrapper from '../components/UserProfileTasks/UserProfileTasksWrapper';
 

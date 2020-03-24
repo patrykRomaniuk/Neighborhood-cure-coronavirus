@@ -2,7 +2,8 @@ import React, { useState,useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import TasksWrapper from '../components/Tasks/TasksWrapper';
 import ReactMapGL, { Popup } from 'react-map-gl';
-import { getTasks,changeIsSelected,getTaskByID,getUserLocationTasks } from '../actions/tasks';
+import { getTasks,getTaskByID,getUserLocationTasks } from '../actions/tasks/getActions/getActions';
+import { changeIsSelected } from '../actions/tasks/changeIsSelected'
 import { connect } from 'react-redux';
 import LocationTasksWrapper from '../components/LocationTasks/LocationTasksWrapper';
 import Loader from 'react-loader';
