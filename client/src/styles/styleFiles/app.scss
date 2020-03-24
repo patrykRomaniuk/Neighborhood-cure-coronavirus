@@ -11,6 +11,8 @@
 @import './settingsLinksStyles/deleteUserAccount/deleteUserAccountStyles.scss';
 @import '../functions/footerFunctions.js/footerFunctions.scss';
 @import './editTaskDescriptionStyles/editTaskDescriptionStyles.scss';
+@import './errorPageStyles/errorPageStyles.scss';
+@import './singleUserStyles/singleUserStyles.scss';
 
 *{
     @include basicPageStylingRemove();
@@ -53,6 +55,10 @@
         @include deleteUserAccount();
 
         @include editTaskPageStyles();
+
+        @include errorPageStyles();
+
+        @include singleUserStyles();
 
         @include footer();
     }   

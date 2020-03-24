@@ -21,6 +21,7 @@
                 flex-direction: column;
                 @include flexCenter;
                 flex-direction: column;
+                padding-bottom: 1em;
                 ul{
                     flex-direction: column;
                    @include flexCenter();

@@ -9,7 +9,8 @@ import {
     REJECTED_CHANING_USER_DATA,
     ADD_DESCRIPTION,
     REMOVE_USER_DESCRIPTION,
-    DELETE_USER
+    DELETE_USER,
+    SINGLE_USER
 } from '../actions/constants';
 
 const initialState = {
@@ -17,6 +18,7 @@ const initialState = {
     user: null,
     isLoading: true,
     isAuthenticated: false,
+    singleUser: {},
     error: {}
 }
 
@@ -35,10 +37,10 @@ const auth = (state = initialState, action) => {
                 isLoading: false,
                 error: {}
             }
-        case GET_USER_BY_ID:
+        case SINGLE_USER:
             return {
                 ...state,
-                user: payload
+                singleUser: payload
             }
         case USER_LOADED:
         case ADD_DESCRIPTION:

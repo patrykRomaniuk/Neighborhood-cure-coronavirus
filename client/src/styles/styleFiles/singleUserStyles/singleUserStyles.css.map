@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "singleUserStyles.scss",
+        "../userProfileStyles/userProfileStyles.scss"
+    ],
+    "names": [],
+    "file": "singleUserStyles.css"
+}

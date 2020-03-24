@@ -1,0 +1,23 @@
+
+@mixin errorPageStyles(){
+    .error-page-wrapper{
+        @include fullScreen();
+        @include flexCenter();
+        flex-direction: column;
+        font-family: $montSerrat;
+        header{
+            text-align: center;
+            h1{
+                color: $mainDark;
+            }
+        }
+        .go-black-btn{
+            padding: .75em !important;
+            @include mainBlueButton();
+            a{
+                text-decoration: none;
+                color: $mainWhite;
+            }
+        }
+    }
+}

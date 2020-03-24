@@ -1,0 +1,8 @@
+@import '../userProfileStyles/userProfileStyles.scss';
+
+@mixin singleUserStyles(){
+    .single-user-page-wrapper{
+        margin-top: 1.5em !important;
+    }
+    @include userProfileStyles();
+}
