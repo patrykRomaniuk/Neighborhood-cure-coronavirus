@@ -46,7 +46,8 @@ const taskReducer = (state = initialState, action) => {
                 tasks: payload
             }
         case EDIT_TASK:
-                alert(payload)
+            alert(payload);
+            break;
         case TASK_ERROR:
             return {
                 ...state,

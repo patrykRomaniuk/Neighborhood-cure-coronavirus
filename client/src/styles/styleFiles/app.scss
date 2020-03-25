@@ -59,6 +59,8 @@
 
         @include errorPageStyles();
 
+        @include authComponentStyles();
+
         @include singleUserStyles();
 
         @include landingPageStyles();

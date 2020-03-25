@@ -10,7 +10,7 @@ module.exports.putDescription = async(req,res) => {
             return res.status(401).json({ errors: errors.array() });
         }
         if(!user){
-            return res.status(404).json({ msg: "You are not allowed to do that" });
+            return res.status(404).json("You are not allowed to do that");
         }
 
         user.description = description;

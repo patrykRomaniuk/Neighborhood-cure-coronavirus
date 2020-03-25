@@ -4,7 +4,6 @@ import {
     LOG_OUT,
     AUTH_ERROR,
     USER_LOADED,
-    GET_USER_BY_ID,
     CHANGE_PASSWORD,
     REJECTED_CHANING_USER_DATA,
     ADD_DESCRIPTION,
@@ -65,6 +64,15 @@ const auth = (state = initialState, action) => {
                 singleUser: {}
             }
         case AUTH_FORM_FAIL:
+            alert("Something went wrong")
+            return {
+                ...state,
+                user: null,
+                isAuthenticated: false,
+                isLoading: true,
+                error: payload,
+                singleUser: {}
+            }
         case AUTH_ERROR:
             localStorage.removeItem('token');
             return {
@@ -73,7 +81,6 @@ const auth = (state = initialState, action) => {
                 isAuthenticated: false,
                 isLoading: true,
                 singleUser: {},
-                error: payload
             }
         case REJECTED_CHANING_USER_DATA:
             return {

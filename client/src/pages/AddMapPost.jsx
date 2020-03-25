@@ -5,10 +5,10 @@ import { addTask } from '../actions/tasks/postActions/addTask';
 
 const AddMapPost = ({ auth: { isAuthenticated },addTask }) => {
 
-   /* if(!isAuthenticated){
+    if(!isAuthenticated){
         alert("You are not logged in!");
         return <Redirect to="/login"/>
-    }*/
+    }
 
     let [formData,setFormData] = useState({
         description: '',

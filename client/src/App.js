@@ -20,6 +20,7 @@ import ChangePassword from './pages/settings/ChangePassword';
 import DeleteUserAccount from './pages/settings/DeleteUserAccount';
 import EditTask from './pages/EditTask';
 import './styles/styleFiles/app.css';
+import Author from './components/Author';
 
 if(localStorage.getItem('token')){
   setAuthToken(localStorage.getItem('token'));
@@ -50,6 +51,7 @@ const App = () => {
             <Route exact path="/edit-task/:task_id" component={ EditTask }/>
             <Route component={ ErrorPage }/>
           </Switch>
+        <Author/>
         <Footer/>
       </Router>
     </Provider>

@@ -7,7 +7,7 @@ module.exports.changePassword = async(req,res) => {
         let user = await User.findById(req.user.id);
 
         if(!await bcryptjs.compare(passwordForm,user.password))
-            return res.status(401).json({ msg: "Passwords don't match" });
+            return res.status(401).json("Wrong password");
 
         const salt = await bcryptjs.genSalt(10);
         const hashedNewPassword = await bcryptjs.hash(newPassword,salt);

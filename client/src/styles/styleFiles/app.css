@@ -275,6 +275,16 @@
   border-radius: 5px;
 }
 
+* body .login-page-section .divide-section-50-50 .inputs-wrapper .show-password-section {
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+* body .login-page-section .divide-section-50-50 .inputs-wrapper .show-password-section:hover {
+  color: #d7d6d8;
+  cursor: pointer;
+}
+
 * body .login-page-section .divide-section-50-50 .inputs-wrapper .login-button {
   background: #39c6f1;
   display: -webkit-box;
@@ -432,6 +442,16 @@
           box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.03);
   padding: .45em;
   border-radius: 5px;
+}
+
+* body .register-page-wrapper .register-inputs-wrapper .show-password-section {
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+* body .register-page-wrapper .register-inputs-wrapper .show-password-section:hover {
+  color: #d7d6d8;
+  cursor: pointer;
 }
 
 * body .register-page-wrapper .register-inputs-wrapper .first-input {
@@ -1784,6 +1804,26 @@
 * body .error-page-wrapper .go-black-btn a {
   text-decoration: none;
   color: #fcf8f8;
+}
+
+* body .author-component-wrapper {
+  text-decoration: none;
+  color: #494949;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 6;
+  padding: .5em;
+  text-align: center;
+  border-top-left-radius: 3px;
+  font-weight: 600;
+  font-family: "MontSerrat", "sans-serif";
+}
+
+* body .author-component-wrapper:hover {
+  cursor: pointer;
+  background: #fcf8f8;
+  color: #39c6f1;
 }
 
 * body .single-user-page-wrapper {

@@ -16,7 +16,7 @@ module.exports.registerUser = async(req,res) => {
         }
 
         if(user){
-            return res.status(401).json({ msg: "There is already user with this e-mail" });
+            return res.status(401).json("There is already user with this e-mail");
         }
 
         const avatar = gravatar.url(email,{

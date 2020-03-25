@@ -32,8 +32,7 @@ let User = mongoose.Schema({
     },
     location: {
         zipCode: {
-            type: String,
-            required: true
+            type: String
         },
         country: {
             type: String,

@@ -3,7 +3,7 @@ import { Redirect,Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { loginUser } from '../../actions/auth/loginUser';
 
-const Login = ({ auth: { isAuthenticated },loginUser }) => {
+const Login = ({ auth: { isAuthenticated,error },loginUser }) => {
 
     if(isAuthenticated){
         alert("You are logged in!");
@@ -12,21 +12,25 @@ const Login = ({ auth: { isAuthenticated },loginUser }) => {
 
     let [formData,setFormData] = useState({
         email: '',
-        password: ''
+        password: '',
+        isShowPassword: false
     })
 
-    const { email,password } = formData;
+    const { email,password,isShowPassword } = formData;
 
     const onChange = (e) => {
         setFormData({ ...formData,[e.target.name]: e.target.value });
     }
 
+    const changeShowingPassword = () => {
+        setFormData({ ...formData, isShowPassword: !isShowPassword })
+    }
+
     const onSubmit = e => {
         e.preventDefault();
-        if(email !== '' && password !== '')
-            loginUser(formData);
-        else 
-            return alert('Email or password are invalid');
+        if(email === '' || password === '')
+            return alert("Password or email is empty");
+        loginUser(formData);
     }
 
     return (
@@ -45,7 +49,17 @@ const Login = ({ auth: { isAuthenticated },loginUser }) => {
                     </div>
                     <div className="input">
                         <label>Password</label>
-                        <input value={ password } name="password" type="text" onChange={(e) => onChange(e)} onKeyPress={(e) => { if(e.key === 'Enter') onSubmit(e) }}/>
+                        <input 
+                        value={ password } 
+                        name="password"
+                        type={ isShowPassword ? "text" : "password"} 
+                        onChange={(e) => onChange(e)} 
+                        onKeyPress={(e) => { if(e.key === 'Enter') onSubmit(e) }}
+                        />
+                    </div>
+                    <div className="show-password-section" onClick={() => changeShowingPassword()}>
+                        <i className={isShowPassword ? "fas fa-eye" : "fas fa-eye-slash"}></i>{'   '}
+                        <span>{ isShowPassword ? "Hide password" : "Show password" }</span>
                     </div>
                     <div className="login-button" onClick={(e) => onSubmit(e)} type="submit">
                         Submit

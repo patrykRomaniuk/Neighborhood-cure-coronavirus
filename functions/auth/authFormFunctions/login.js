@@ -14,13 +14,13 @@ module.exports.loginUser = async(req,res) => {
     }
 
     if(!user){
-        return res.status(401).json({ msg: "There is no user with this email" });
+        return res.status(401).json("User not found");
     }
 
    let isMatch = await bcryptjs.compare(password,user.password);
     
     if(!isMatch){
-        return res.status(401).json({ msg: "Passwords don't match" });
+        return res.status(401).json("Wrong password");
     }
 
     await user.save();

@@ -30,6 +30,13 @@
                 .input{
                    @include formInput();
                 }
+                .show-password-section{
+                    transition: all .3s ease-in-out;
+                    &:hover{
+                        color: $mainGray;
+                        cursor: pointer;
+                    }
+                }
                 .login-button{
                    @include mainBlueButton();
                 }

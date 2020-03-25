@@ -1,0 +1,20 @@
+@mixin authorComponentStyles(){
+    .author-component-wrapper{
+        text-decoration: none;
+        color: #494949;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        z-index: 6;
+        padding: .5em;
+        text-align: center;
+        border-top-left-radius: 3px;
+        font-weight: 600;
+        font-family: $montSerrat;
+        &:hover{
+            cursor: pointer;
+            background: $mainWhite;
+            color: $mainBlueColor;
+        }
+    }
+}
