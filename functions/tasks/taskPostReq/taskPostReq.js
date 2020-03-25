@@ -12,10 +12,7 @@ module.exports.addTask = async(req,res) => {
 
         const tasks = await Task.create(req.body);
 
-        return res.json({
-            success: true,
-            data: tasks
-        });
+        return res.json(tasks);
     } catch (error) {
         console.log(error.message);
         return res.status(500).json({ msg: "Server errror..." });

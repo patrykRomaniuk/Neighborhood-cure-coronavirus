@@ -678,6 +678,25 @@
   text-decoration: none;
 }
 
+* body .task-rejection {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* body .task-rejection span {
+  color: #39c6f1;
+  font-size: 2.2em;
+}
+
 * body .add-task-wrapper {
   margin-top: 6em;
   display: -webkit-box;
@@ -1122,6 +1141,10 @@
 }
 
 * body .user-profile-page-wrapper .description-section .user-has-description {
+  max-width: 100%;
+  height: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1135,6 +1158,11 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+* body .user-profile-page-wrapper .description-section .user-has-description .description {
+  overflow-y: scroll;
+  width: 100%;
 }
 
 * body .user-profile-page-wrapper .description-section .user-has-description .remove-description-button {
@@ -1845,6 +1873,10 @@
 }
 
 * body .user-profile-page-wrapper .description-section .user-has-description {
+  max-width: 100%;
+  height: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1858,6 +1890,11 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+* body .user-profile-page-wrapper .description-section .user-has-description .description {
+  overflow-y: scroll;
+  width: 100%;
 }
 
 * body .user-profile-page-wrapper .description-section .user-has-description .remove-description-button {
@@ -2097,6 +2134,55 @@
 * body .user-profile-page-wrapper .user-tasks-wrapper .user-task .user-task-buttons .user-task-edit-btn a {
   color: #0c0c0c;
   text-decoration: none;
+}
+
+* body .landing-page-wrapper {
+  margin-top: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 90vh;
+  font-family: "MontSerrat", "sans-serif";
+  background: url("./images/landingPageImage2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  text-shadow: 2.5px 2.5px #0c0c0c;
+}
+
+* body .landing-page-wrapper .main-header {
+  color: #39c6f1;
+  margin-bottom: .5em;
+}
+
+* body .landing-page-wrapper .middle-section {
+  color: #fcf8f8;
+  margin-bottom: .5em;
+}
+
+* body .landing-page-wrapper .sub-section {
+  color: #fcf8f8;
+  font-size: 1.5em;
+}
+
+* body .landing-page-wrapper .sub-section a {
+  color: #39c6f1;
+}
+
+* body .landing-page-wrapper .sub-section .free-text {
+  color: #39c6f1;
 }
 
 * body footer {

@@ -65,4 +65,12 @@
             }
         }
     }
+    .task-rejection{
+        @include fullScreen();
+        @include flexCenter();
+        span{
+            color: $mainBlueColor;
+            font-size: 2.2em;
+        }
+    }
 }

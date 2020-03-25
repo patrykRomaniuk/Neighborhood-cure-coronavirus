@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { logOut } from '../actions/auth/logOut';
 
-const Footer = ({ isAuthenticated }) => {
+const Footer = ({ isAuthenticated,logOut }) => {
     return (
         <footer>
             <div className="footer-container footer-links-wrapper">
@@ -15,7 +16,11 @@ const Footer = ({ isAuthenticated }) => {
                         <li className="links-header"><Link to="/map">Map</Link></li>
                         <li style={{ display: isAuthenticated ? "block" : "none" }} className="links-header"><Link to="/user-profile">Profile</Link></li>
                         <li style={{ display: isAuthenticated ? "block" : "none" }} className="links-header"><Link to="/add-map-post">Add Task</Link></li>
-                        <li style={{ display: isAuthenticated ? "block" : "none" }} className="links-header"><Link to="/login">Log Out</Link></li>
+                        <li style={{ display: isAuthenticated ? "block" : "none" }} className="links-header" onClick={() => logOut()}>
+                            <Link to="/login">
+                            Log Out
+                            </Link>
+                        </li>
                         <li className="links-header"><Link to="/sign-in" >Landing</Link></li>
 
                     </ul>
@@ -32,9 +37,8 @@ const Footer = ({ isAuthenticated }) => {
                 <div className="footer-links-section">
                     <ul>
                         <li className="links-header">Info about creator</li>
-                        <li className="about"><a href="http://patryk-romaniuk.com/" target="_blank"></a>Website</li>
-                        <li className="about"><a href="https://www.youtube.com/channel/UCGdjiAYIMltlO3j8LhVkSbA?view_as=subscriber"></a>Youtube channel</li>
-                        <li className="about">Instagram</li>
+                        <li className="about"><a href="http://patryk-romaniuk.com/" target="_blank">Website</a></li>
+                        <li className="about"><a href="https://www.youtube.com/channel/UCGdjiAYIMltlO3j8LhVkSbA?view_as=subscriber" target="_blank">Youtube channel</a></li>
                     </ul>
                 </div>
 
@@ -62,4 +66,4 @@ const mapStateToProps = state => ({
     isAuthenticated: state.auth.isAuthenticated
 });
 
-export default connect(mapStateToProps)(Footer);
+export default connect(mapStateToProps, { logOut })(Footer);

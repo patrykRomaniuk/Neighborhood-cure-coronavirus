@@ -20,6 +20,18 @@ const SingleUser = ({ match,getUserByID,auth }) => {
                 <p>{ auth.singleUser.age } years old</p>
                 <p>Phone: { auth.singleUser.phone }</p>
             </div>
+
+            <div className="description-section">
+                <div className="user-has-description">
+                    <div className="description">
+                            {
+                                auth.singleUser.description ? 
+                                (<p>{auth.singleUser.description}</p>) : 
+                                (<p>This user doesn't have description</p>)
+                            }
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

@@ -29,10 +29,17 @@
             }
 
             .user-has-description{
+                max-width: 100%;
+                height: auto;
+                flex-wrap: wrap;
                 display: flex;
                 justify-content: flex-start;
                 align-items: flex-start;
                 flex-direction: column;
+                .description{
+                    overflow-y: scroll;
+                    width: 100%;
+                }
                 .remove-description-button{
                     text-align: center;
                     padding: .5em !important;

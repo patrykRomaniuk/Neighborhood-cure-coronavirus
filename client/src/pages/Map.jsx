@@ -22,12 +22,15 @@ const Map = ({ taskReducer: { tasks,locationTasks },auth,getTasks,getUserLocatio
 
     useEffect(() => {
         getTasks();
-        getUserLocationTasks(localStorage.getItem('userLocation').toString());
+        if(localStorage.getItem('userLocation')) getUserLocationTasks(localStorage.getItem('userLocation').toString());
         const listenter = e => {
             if(e.key === 'Escape')
                 setSelectedTask(null);
         }
         window.addEventListener('keydown',listenter);
+        return () => {
+            window.removeEventListener('keydown',listenter);
+        }
     },[])
 
     return (
@@ -108,7 +111,7 @@ const Map = ({ taskReducer: { tasks,locationTasks },auth,getTasks,getUserLocatio
                 }
 
                 <div className="tasks-wrapper">
-                   <LocationTasksWrapper tasks={locationTasks}/>
+                   <LocationTasksWrapper tasks={locationTasks} auth={auth}/>
                 </div>
             </div>
         </div>

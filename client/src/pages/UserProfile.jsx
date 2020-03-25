@@ -44,23 +44,40 @@ const UserProfile = ({ auth, addDescription,removeDescription,getUserTasks,taskR
                         auth.user.description ?
                         (
                             <div className="user-has-description">
-                                <p>{auth.user.description}</p>
+                                <div className="description">
+                                    <p>{auth.user.description}</p>
+                                </div>
 
                                 <div className="remove-description-button" onClick={() => removeDescription()}>
                                     Remove Description
                                 </div>
 
-                                <div className="edit-description-button" onClick={() => setFormData({ isEditDescription: !isEditDescription })}>
+                                <div 
+                                style={{ marginBottom: isEditDescription ? ".4em" : "0em" }}
+                                className="edit-description-button"
+                                onClick={() => setFormData({ isEditDescription: !isEditDescription })}>
                                     Edit description
                                 </div>
+                                <div className="description-text" style={{ display: isEditDescription ? "block" : "none" }}>
 
-                                <textarea
-                                 value={ description }
-                                onChange={e => onChange(e)} 
-                                name="description"
-                                style={{ display: isEditDescription ? "block" : "none" }}
-                                className="add-description-area"
-                                />
+                                    <textarea
+                                    value={ description }
+                                    onChange={e => onChange(e)} 
+                                    name="description"
+                                    className="add-description-area"
+                                    />
+
+                                    <div 
+                                    className="description-btn" 
+                                    onClick={() => {
+                                        if(description === '') return alert("You've forgotten to fullfil the description");
+                                        addDescription(description);
+                                        setFormData({ description: '' })
+                                    }}>
+                                        Add description
+                                    </div>
+
+                                </div>
                             </div>
                         ) :
                         (

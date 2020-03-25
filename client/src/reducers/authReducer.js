@@ -55,12 +55,14 @@ const auth = (state = initialState, action) => {
                 error: {}
             }
         case LOG_OUT:
+            localStorage.removeItem('userLocation');
             localStorage.removeItem('token');
             return {
                 ...state,
                 user: null,
+                isLoading: true,
                 isAuthenticated: false,
-                isLoading: true
+                singleUser: {}
             }
         case AUTH_FORM_FAIL:
         case AUTH_ERROR:
@@ -70,6 +72,7 @@ const auth = (state = initialState, action) => {
                 user: null,
                 isAuthenticated: false,
                 isLoading: true,
+                singleUser: {},
                 error: payload
             }
         case REJECTED_CHANING_USER_DATA:

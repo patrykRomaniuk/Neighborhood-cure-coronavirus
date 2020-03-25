@@ -14,7 +14,6 @@ const SingleTaskPage = ({ taskReducer: { task },auth, getTaskByID, match }) => {
     return ( task !== null && task !== {} && task !== undefined && task !== [] ) ? (
             <div className="single-task-wrapper">
                 <header>
-                    <h1>Task added by</h1>
                     <p><Moment format="YYYY-MM-DD HH:mm">{ task.createdAt }</Moment></p>
                 </header>
                 <div className="task-description">
@@ -23,9 +22,9 @@ const SingleTaskPage = ({ taskReducer: { task },auth, getTaskByID, match }) => {
                 </div>
                 <div className="task-contact-section">
                     <div className="task-data">
-                        { auth.isAuthenticated ? (<span>Phone: { task.phone }</span>) : (<span>Phone: You have to be logged in to see</span>)}
-                        { auth.isAuthenticated ? (<span>City: { task.city }</span>) : (<span>City: You have to be logged in to see</span>)}
-                        { auth.isAuthenticated ? (<span>Address: { task.address }</span>) : (<span>Address: You have to be logged in to see</span>)}
+                        { auth.isAuthenticated ? (<span>Phone: { task.phone }</span>) : (<span>Phone: You have to be logged in to see <Link to="/login">log in</Link></span>)}
+                        { auth.isAuthenticated ? (<span>City: { task.city }</span>) : (<span>City: You have to be logged in to see <Link to="/login">log in</Link></span>)}
+                        { auth.isAuthenticated ? (<span>Address: { task.address }</span>) : (<span>Address: You have to be logged in to see <Link to="/login">log in</Link></span>)}
                     </div>
                     <div className="task-btn">
                         <Link to={`/user/${task.user}`}>
@@ -36,7 +35,7 @@ const SingleTaskPage = ({ taskReducer: { task },auth, getTaskByID, match }) => {
             </div>
         ) : (
             <div className="task-rejection">
-                There is no task like that
+                <span>There is no task like that</span>
             </div>
         )
 }

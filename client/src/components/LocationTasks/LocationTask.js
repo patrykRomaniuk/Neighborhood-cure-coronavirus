@@ -7,8 +7,7 @@ import howManyDaysPassedInHours from '../../functions/howManyDaysPassedInHours';
 
 const LocationTask = ({ task, deleteTaskByID }) => {
 
-    if(howManyDaysPassedInHours(task.createdAt) >= 2){
-        alert("2 hours passed, so I'm removing this task");
+    if(howManyDaysPassedInHours(task.createdAt) >= 72){
         deleteTaskByID(task._id);
     }
 

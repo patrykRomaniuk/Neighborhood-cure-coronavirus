@@ -40,11 +40,11 @@ const taskReducer = (state = initialState, action) => {
                 task: payload
             }
         case GET_TASKS:
+        case DELETE_TASK_BY_ID:
             return {
                 ...state,
                 tasks: payload
             }
-        case DELETE_TASK_BY_ID:
         case EDIT_TASK:
                 alert(payload)
         case TASK_ERROR:

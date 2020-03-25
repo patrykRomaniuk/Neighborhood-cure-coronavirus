@@ -6,7 +6,8 @@ module.exports.deleteTaskByID = async(req,res) => {
         let task = await Task.findById(taskIdToRemove);
         if(req.user.id.toString() === task.user.toString()){
             await Task.findByIdAndDelete(taskIdToRemove);
-            res.json("Task removed");
+            const tasks = await Task.find();
+            res.json(tasks);
         } else res.json("Couldn't find task");
     } catch (error) {
         console.log(error.message);
