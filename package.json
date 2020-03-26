@@ -24,6 +24,15 @@
     "node-geocoder": "^3.26.0"
   },
   "devDependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.0",
+    "forever": "^1.0.1",
+    "gravatar": "^1.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.6",
     "node-geocoder": "^3.26.0"
   }
 }
