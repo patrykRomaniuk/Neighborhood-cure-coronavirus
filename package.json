@@ -11,8 +11,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.0",
     "bcryptjs": "^2.4.3",
     "config": "^3.3.0",
     "cors": "^2.8.5",
@@ -23,9 +21,9 @@
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.24.0",
     "mongoose": "^5.9.2",
-    "node-geocoder": "^3.26.0",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "node-geocoder": "^3.26.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "node-geocoder": "^3.26.0"
+  }
 }
