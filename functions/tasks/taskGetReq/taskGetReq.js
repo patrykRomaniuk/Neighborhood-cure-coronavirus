@@ -3,7 +3,7 @@ const Task = require('../../../schemas/Task');
 module.exports.getAllTasks = async(req,res) => {
     try {
         const tasks = await Task.find();
-        res.json({ success: true, data: tasks });
+        res.json({ data: tasks });
     } catch (error) {
         console.log(error.message);
         return res.status(500).json({ msg: "Server errror..." });
@@ -13,7 +13,8 @@ module.exports.getAllTasks = async(req,res) => {
 module.exports.getUserTasks = async(req,res) => {
     try {
         const tasks = await Task.find();
-        res.json({ success: true, data: tasks });
+        let userTasks = tasks.filter(task => task.user.toString() === req.user.id.toString());
+        res.json({ data: userTasks });
     } catch (error) {
         console.log(error.message);
         return res.status(500).json({ msg: "Server errror..." });

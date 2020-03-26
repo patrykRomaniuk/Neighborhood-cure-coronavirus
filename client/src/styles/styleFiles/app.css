@@ -1818,6 +1818,13 @@
   border-top-left-radius: 3px;
   font-weight: 600;
   font-family: "MontSerrat", "sans-serif";
+  font-size: .7em;
+}
+
+@media (min-width: 1024px) {
+  * body .author-component-wrapper {
+    font-size: 1em;
+  }
 }
 
 * body .author-component-wrapper:hover {

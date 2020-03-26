@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState } from 'react'
 import { connect } from 'react-redux';
 import { registerUser } from '../../actions/auth/registerUser';
 import { Redirect, Link } from 'react-router-dom';

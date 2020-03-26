@@ -11,7 +11,7 @@ module.exports.registerValidations = [
         check('lastName', 'Please type proper last name').not().isEmpty(),
         check('address', 'Please type proper address').not().isEmpty(),
         check('age', 'Please type proper name').isNumeric(),
-        check('password', 'Password has to have at least 6 letters').isLength({ min: 6 }),
+        check('password', 'Password has to have at least 3 letters').isLength({ min: 3 }),
         check('email','Type proper e-mail').isEmail(),
         check('phone','Please type proper phone number').not().isEmpty(),
         check('country', 'Country is required').not().isEmpty(),

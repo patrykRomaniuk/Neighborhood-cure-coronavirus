@@ -14,6 +14,7 @@
 @import './errorPageStyles/errorPageStyles.scss';
 @import './singleUserStyles/singleUserStyles.scss';
 @import './landingPageStyles/landingPageStyles.scss';
+@import '../functions/authorFunctions.js/authorFunctions.scss';
 
 *{
     @include basicPageStylingRemove();
@@ -59,7 +60,7 @@
 
         @include errorPageStyles();
 
-        @include authComponentStyles();
+        @include authorComponentStyles();
 
         @include singleUserStyles();
 

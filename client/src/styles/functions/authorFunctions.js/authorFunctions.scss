@@ -11,6 +11,10 @@
         border-top-left-radius: 3px;
         font-weight: 600;
         font-family: $montSerrat;
+        font-size: .7em;
+        @media(min-width: 1024px){
+            font-size: 1em;
+        }
         &:hover{
             cursor: pointer;
             background: $mainWhite;

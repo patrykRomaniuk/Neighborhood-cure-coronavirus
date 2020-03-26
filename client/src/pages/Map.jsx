@@ -72,7 +72,7 @@ const Map = ({ taskReducer: { tasks,locationTasks },auth,getTasks,getUserLocatio
                                                     (
                                                         <div>
                                                             <p>{ selectedTask.description.slice(0,50) }</p> {' '}
-                                                            <Link to={`/task/${selectedTask._id}`} target="_blank">Read more...</Link>
+                                                            <Link to={`/task/${selectedTask._id}`}>Read more...</Link>
                                                         </div>
                                                     )
                                                     :

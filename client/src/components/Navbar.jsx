@@ -18,6 +18,7 @@ const Navbar = ({ auth: { isAuthenticated }, logOut }) => {
                 <Link to="/map">Map</Link>
                 <Link style={{ display: isAuthenticated ? 'block' : 'none' }} to="/user-profile">Profile</Link>
                 <Link style={{ display: isAuthenticated ? 'block' : 'none' }} to="/add-map-post">Add task</Link>
+                <a href="https://www.patreon.com/" target="_blank">Patreon</a>
                 <Link style={{ display: isAuthenticated ? 'block' : 'none' }} to="/settings">Settings</Link>
                 <Link style={{ display: isAuthenticated ? 'block' : 'none' }} onClick={() => logOut()} to="/">Log Out</Link>
                 <Link style={{ display: !isAuthenticated ? 'block' : 'none' }} to="/login">Login</Link>
@@ -52,6 +53,7 @@ const Navbar = ({ auth: { isAuthenticated }, logOut }) => {
                 zIndex: isSidebar ? '-1' : '10'
             }}>
                 <Link to="/map" onClick={() => setSidebar(false)}>Map</Link>
+                <a href="https://www.patreon.com/" target="_blank" onClick={() => setSidebar(false)}>Patreon</a>
                 <Link style={{ display: isAuthenticated ? 'block' : 'none' }} onClick={() => setSidebar(false)} to="/user-profile">Profile</Link>
                 <Link style={{ display: isAuthenticated ? 'block' : 'none' }} onClick={() => setSidebar(false)} to="/add-map-post">Add task</Link>
                 <Link style={{ display: isAuthenticated ? 'block' : 'none' }} onClick={() => setSidebar(false)} to="/settings">Settings</Link>

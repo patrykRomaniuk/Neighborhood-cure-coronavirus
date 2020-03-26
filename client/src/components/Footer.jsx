@@ -29,8 +29,9 @@ const Footer = ({ isAuthenticated,logOut }) => {
                 <div className="footer-links-section">
                     <ul>
                         <li style={{ display: isAuthenticated ? "block" : "none" }} className="links-header"><Link to="/settings">Settings</Link></li>
+                        <li style={{ display: isAuthenticated ? "block" : "none" }} className="about"><a href="https://www.patreon.com/" target="_blank">Patreon</a></li>
                         <li style={{ display: isAuthenticated ? "block" : "none" }} className="about"><Link to="/change-password">Change password</Link></li>
-                        <li  style={{ display: isAuthenticated ? "block" : "none" }}className="about"><Link to="/delete-user">Delete account</Link></li>
+                        <li  style={{ display: isAuthenticated ? "block" : "none" }} className="about"><Link to="/delete-user">Delete account</Link></li>
                     </ul>
                 </div>
 

@@ -21,8 +21,9 @@ const UserProfile = ({ auth, addDescription,removeDescription,getUserTasks,taskR
 
     const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
 
-    return auth.user !== null && auth.user !== {} && auth.user !== [] && auth.user !== undefined && (
-        <div className="user-profile-page-wrapper">
+    return auth.user !== null && auth.user !== {} && auth.user !== [] && auth.user !== undefined &&
+    taskReducer.userTasks !== null && taskReducer.userTasks !== null && taskReducer.userTasks !== [] && taskReducer.userTasks !== {} && (
+      <div className="user-profile-page-wrapper">
             <div className="image-date-section">
                 <img src={auth.user.avatar} alt=""/>
                 <p>Joined at: <Moment format="DD.MM.YYYY">{ auth.user.date }</Moment></p>
@@ -109,7 +110,7 @@ const UserProfile = ({ auth, addDescription,removeDescription,getUserTasks,taskR
                 <header>
                     <h1>Your Tasks</h1>
                 </header>
-                <UserProfileTasksWrapper userTasks={ taskReducer.tasks.data }/>
+                <UserProfileTasksWrapper userTasks={ taskReducer.userTasks.data }/>
             </div>
 
         </div>
