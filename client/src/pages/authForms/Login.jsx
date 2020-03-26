@@ -3,7 +3,7 @@ import { Redirect,Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { loginUser } from '../../actions/auth/loginUser';
 
-const Login = ({ auth: { isAuthenticated,error },loginUser }) => {
+const Login = ({ auth: { isAuthenticated },loginUser }) => {
 
     if(isAuthenticated){
         alert("You are logged in!");
