@@ -2198,10 +2198,10 @@
   width: 100vw;
   height: 90vh;
   font-family: "MontSerrat", "sans-serif";
-  background: url("./images/landingPageImage2.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  /*    background: url('./images/landingPageImage2.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;*/
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
