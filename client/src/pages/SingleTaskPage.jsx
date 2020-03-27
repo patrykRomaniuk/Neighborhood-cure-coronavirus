@@ -18,7 +18,6 @@ const SingleTaskPage = ({ taskReducer: { task },auth, getTaskByID, match }) => {
                     <meta charSet="utf-8" />
                     <title>Task</title>
                     <meta name="description" content={task.description}/>
-                    <meta httpEquiv="Content-Security-Policy" content="default-src 'none'; connect-src 'self';font-src 'self'; img-src 'self' data: https:; style-src 'self' ; script-src 'self'"/>
                 </Helmet>
                 <header>
                     <p><Moment format="YYYY-MM-DD HH:mm">{ task.createdAt }</Moment></p>

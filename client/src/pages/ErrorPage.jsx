@@ -12,7 +12,6 @@ const ErrorPage = () => {
                     <meta name="keywords" content="Neighborly, Neighborly Help, neighborly help, neighborlyhelp, neighborhoodhelp, neighborly, error page"/>
                     <meta name="author" content="Patryk Romaniuk"/> 
                     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-                    <meta httpEquiv="Content-Security-Policy" content="default-src 'none'; connect-src 'self';font-src 'self'; img-src 'self' data: https:; style-src 'self' ; script-src 'self'"/>
             </Helmet>
             <header>
                 <h1>Error 404: Page not found</h1>
