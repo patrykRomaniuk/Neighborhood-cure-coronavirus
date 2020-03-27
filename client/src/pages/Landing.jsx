@@ -1,12 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
-import landingPageImage2 from './landingPageImage2.jpg';
 
 const Landing = () => {
     return (
         <div className="landing-page-wrapper">
-            <img src={ landingPageImage2 } alt=""/>
               <Helmet>
                 <meta charSet="utf-8" />
                 <title>NeighborlyHelp</title>

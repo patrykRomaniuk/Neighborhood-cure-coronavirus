@@ -2204,6 +2204,10 @@
           flex-direction: column;
   text-align: center;
   text-shadow: 2.5px 2.5px #0c0c0c;
+  background: url("./landingPageImage2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 * body .landing-page-wrapper .main-header {
