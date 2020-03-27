@@ -12,6 +12,7 @@ const Landing = () => {
                 <meta name="keywords" content="Neighborly, Neighborly Help, neighborly help, neighborlyhelp, neighborhoodhelp, neighborly"/>
                 <meta name="author" content="Patryk Romaniuk"/> 
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                <meta httpEquiv="Content-Security-Policy" content="default-src 'none'; connect-src 'self';font-src 'self'; img-src 'self' data: https:; style-src 'self' ; script-src 'self'"/>
             </Helmet>
             <h1 className="main-header">NeighborlyHelp</h1>
             <h1 className="middle-section">Join a growing community where neighbors can help each other on daily basis</h1>

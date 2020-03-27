@@ -45,6 +45,7 @@ const AddMapPost = ({ auth: { isAuthenticated },addTask }) => {
                     <meta name="keywords" content="Neighborly, Neighborly Help, neighborly help, neighborlyhelp, neighborhoodhelp, neighborly, add task to map"/>
                     <meta name="author" content="Patryk Romaniuk"/> 
                     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                    <meta httpEquiv="Content-Security-Policy" content="default-src 'none'; connect-src 'self';font-src 'self'; img-src 'self' data: https:; style-src 'self' ; script-src 'self'"/>
                 </Helmet>
 
                 <header>

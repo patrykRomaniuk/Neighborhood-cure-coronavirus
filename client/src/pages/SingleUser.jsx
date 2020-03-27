@@ -15,6 +15,7 @@ const SingleUser = ({ match,getUserByID,auth }) => {
                 <meta charSet="utf-8" />
                 <title>{ `${auth.singleUser.name} ${ auth.singleUser.lastName }` }</title>
                 <meta name="description" content={auth.singleUser.description}/>
+                <meta httpEquiv="Content-Security-Policy" content="default-src 'none'; connect-src 'self';font-src 'self'; img-src 'self' data: https:; style-src 'self' ; script-src 'self'"/>
             </Helmet>
             <div className="image-date-section">
                 <img src={auth.singleUser.avatar} alt=""/>

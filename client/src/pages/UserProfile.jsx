@@ -32,6 +32,7 @@ const UserProfile = ({ auth, addDescription,removeDescription,getUserTasks,taskR
                     <meta name="keywords" content="Neighborly, Neighborly Help, neighborly help, neighborlyhelp, neighborhoodhelp, neighborly"/>
                     <meta name="author" content="Patryk Romaniuk"/> 
                     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                    <meta httpEquiv="Content-Security-Policy" content="default-src 'none'; connect-src 'self';font-src 'self'; img-src 'self' data: https:; style-src 'self' ; script-src 'self'"/>
             </Helmet>
             <div className="image-date-section">
                 <img src={auth.user.avatar} alt=""/>
