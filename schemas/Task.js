@@ -22,8 +22,7 @@ let TaskSchema = mongoose.Schema({
         required: [true,'Please put country']
     },
     address: {
-        type: String,
-       /* required: [true,'Please add an address']*/
+        type: String
     },
     location: {
         type: {
@@ -49,7 +48,6 @@ TaskSchema.pre('save', async function(next){
         coordinates: [loc[0].longitude, loc[0].latitude],
         formattedAddress: loc[0].formattedAddress
     }
-    //this.address = undefined;
     next();
 })
 
