@@ -53,7 +53,7 @@ const Navbar = ({ auth: { isAuthenticated }, logOut }) => {
                 zIndex: isSidebar ? '-1' : '10'
             }}>
                 <Link to="/map" onClick={() => setSidebar(false)}>Map</Link>
-                <a href="https://www.patreon.com/" target="_blank" onClick={() => setSidebar(false)}>Patreon</a>
+                <a href="https://www.patreon.com/user?u=32543503&fan_landing=true" target="_blank" onClick={() => setSidebar(false)}>Patreon</a>
                 <Link style={{ display: isAuthenticated ? 'block' : 'none' }} onClick={() => setSidebar(false)} to="/user-profile">Profile</Link>
                 <Link style={{ display: isAuthenticated ? 'block' : 'none' }} onClick={() => setSidebar(false)} to="/add-map-post">Add task</Link>
                 <Link style={{ display: isAuthenticated ? 'block' : 'none' }} onClick={() => setSidebar(false)} to="/settings">Settings</Link>
