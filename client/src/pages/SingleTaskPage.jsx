@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getTaskByID } from '../actions/tasks/getActions/getActions';
 import Moment from 'react-moment';
+import { Helmet } from 'react-helmet';
 
 const SingleTaskPage = ({ taskReducer: { task },auth, getTaskByID, match }) => {
 
@@ -13,6 +14,11 @@ const SingleTaskPage = ({ taskReducer: { task },auth, getTaskByID, match }) => {
 
     return ( task !== null && task !== {} && task !== undefined && task !== [] ) ? (
             <div className="single-task-wrapper">
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>Task</title>
+                    <meta name="description" content={task.description}/>
+                </Helmet>
                 <header>
                     <p><Moment format="YYYY-MM-DD HH:mm">{ task.createdAt }</Moment></p>
                 </header>

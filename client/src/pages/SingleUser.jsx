@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { getUserByID } from '../actions/auth/getUserByID';
+import { Helmet } from 'react-helmet';
 import { connect } from 'react-redux';
 import Moment from 'react-moment';
  
@@ -10,6 +11,11 @@ const SingleUser = ({ match,getUserByID,auth }) => {
     },[])
     return (auth.singleUser !== null && auth.singleUser !== {} && auth.singleUser !== undefined && auth.singleUser !== []) && (
         <div className="single-user-page-wrapper user-profile-page-wrapper">
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>{ `${auth.singleUser.name} ${ auth.singleUser.lastName }` }</title>
+                <meta name="description" content={auth.singleUser.description}/>
+            </Helmet>
             <div className="image-date-section">
                 <img src={auth.singleUser.avatar} alt=""/>
                 <p>Joined at: <Moment format="DD.MM.YYYY">{ auth.singleUser.date }</Moment></p>
