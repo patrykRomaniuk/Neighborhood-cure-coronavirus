@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import { addTask } from '../actions/tasks/postActions/addTask';
+import { Helmet } from 'react-helmet';
 
 const AddMapPost = ({ auth: { isAuthenticated },addTask }) => {
 
@@ -36,6 +37,15 @@ const AddMapPost = ({ auth: { isAuthenticated },addTask }) => {
 
     return (
         <div className="add-task-wrapper">
+
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>Add task on map</title>
+                    <meta name="description" content="Website where neighbors can help each other by solving their day to day tasks."/>
+                    <meta name="keywords" content="Neighborly, Neighborly Help, neighborly help, neighborlyhelp, neighborhoodhelp, neighborly, add task to map"/>
+                    <meta name="author" content="Patryk Romaniuk"/> 
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                </Helmet>
 
                 <header>
                     <h1>Add task</h1>

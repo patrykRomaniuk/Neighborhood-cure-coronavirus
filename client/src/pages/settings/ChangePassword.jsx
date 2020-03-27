@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { changePassword } from '../../actions/auth/changePassword';
+import { Helmet } from 'react-helmet';
 
 const ChangePassword = ({ changePassword }) => {
 
@@ -24,6 +25,14 @@ const ChangePassword = ({ changePassword }) => {
 
     return (
         <div className="change-password-wrapper">
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Change password</title>
+                <meta name="description" content="Website where neighbors can help each other by solving their day to day tasks."/>
+                <meta name="keywords" content="Neighborly, Neighborly Help, neighborly help, neighborlyhelp, neighborhoodhelp, neighborly, neighborly change password"/>
+                <meta name="author" content="Patryk Romaniuk"/> 
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            </Helmet>
             <header>
                 <h1>Change Password</h1>
             </header>

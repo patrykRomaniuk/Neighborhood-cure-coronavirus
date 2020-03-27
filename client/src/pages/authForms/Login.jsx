@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Redirect,Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { loginUser } from '../../actions/auth/loginUser';
+import { Helmet } from 'react-helmet';
 
 const Login = ({ auth: { isAuthenticated },loginUser }) => {
 
@@ -35,6 +36,16 @@ const Login = ({ auth: { isAuthenticated },loginUser }) => {
 
     return (
         <section className="login-page-section">
+
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>NeighborlyHelp - Login</title>
+                <meta name="description" content="Website where neighbors can help each other by solving their day to day tasks."/>
+                <meta name="keywords" content="Neighborly, Neighborly Help, neighborly help, neighborlyhelp, neighborhoodhelp, neighborly, login, login neighborly"/>
+                <meta name="author" content="Patryk Romaniuk"/> 
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            </Helmet>
+
             <header>
                 <h1>Sign In</h1>
                 <p>or if you don't have an account, <Link to="/register">create an account</Link></p>

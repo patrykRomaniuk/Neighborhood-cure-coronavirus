@@ -7,6 +7,7 @@ import { changeIsSelected } from '../actions/tasks/changeIsSelected'
 import { connect } from 'react-redux';
 import LocationTasksWrapper from '../components/LocationTasks/LocationTasksWrapper';
 import Loader from 'react-loader';
+import { Helmet } from 'react-helmet';
 
 const Map = ({ taskReducer: { tasks,locationTasks },auth,getTasks,getUserLocationTasks }) => {
 
@@ -35,6 +36,15 @@ const Map = ({ taskReducer: { tasks,locationTasks },auth,getTasks,getUserLocatio
 
     return (
         <div className="map-page-wrapper" style={{ marginTop: (tasks === null || tasks === [] || tasks ===  {} || tasks === undefined) ? '0em' : '4.5em' }}>
+
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Map - NeighborlyHelp</title>
+                <meta name="description" content="Check the tasks in your area"/>
+                <meta name="keywords" content="Neighborly, Neighborly Help, neighborly help, neighborlyhelp, neighborhoodhelp, neighborly, neighborly map, neighborhood help map"/>
+                <meta name="author" content="Patryk Romaniuk"/> 
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            </Helmet>
 
             <header>
                 <h1>Map</h1>

@@ -21,6 +21,7 @@ import DeleteUserAccount from './pages/settings/DeleteUserAccount';
 import EditTask from './pages/EditTask';
 import './styles/styleFiles/app.css';
 import Author from './components/Author';
+import { Helmet } from 'react-helmet';
 
 if(localStorage.getItem('token')){
   setAuthToken(localStorage.getItem('token'));
@@ -34,6 +35,14 @@ const App = () => {
 
   return (
     <Provider store={ store }>
+        <Helmet>
+            <meta charSet="utf-8" />
+            <title>NeighborlyHelp</title>
+            <meta name="description" content="Website where neighbors can help each other by solving their day to day tasks."/>
+            <meta name="keywords" content="Neighborly, Neighborly Help, neighborly help, neighborlyhelp, neighborhoodhelp, neighborly"/>
+            <meta name="author" content="Patryk Romaniuk"/> 
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        </Helmet>
       <Router>
         <Navbar/>
           <Switch>

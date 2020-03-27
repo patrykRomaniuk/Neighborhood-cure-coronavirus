@@ -1,6 +1,7 @@
 import React, { useState,useEffect } from 'react';
 import { connect } from 'react-redux';
 import { editTask } from '../actions/tasks/putActions/editTask';
+import { Helmet } from 'react-helmet';
 
 const EditTask = ({ editTask,match }) => {
 
@@ -29,6 +30,14 @@ const EditTask = ({ editTask,match }) => {
 
     return (
         <div className="edit-task-description-wrapper">
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Change Task</title>
+                <meta name="description" content="Edit your task description"/>
+                <meta name="keywords" content="Neighborly, Neighborly Help, neighborly help, neighborlyhelp, neighborhoodhelp, neighborly, edit task neighborly"/>
+                <meta name="author" content="Patryk Romaniuk"/> 
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            </Helmet>
             <header>
                 <h1>Change task description</h1>
             </header>

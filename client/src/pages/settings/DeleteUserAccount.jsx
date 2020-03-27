@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { removeUserAccount } from '../../actions/auth/removeUserAccount';
 import { Redirect } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const DeleteUserAccount = ({ removeUserAccount, auth }) => {
 
@@ -18,6 +19,14 @@ const DeleteUserAccount = ({ removeUserAccount, auth }) => {
 
     return (
         <div className="delete-user-account">
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Delete you account</title>
+                <meta name="description" content="Website where neighbors can help each other by solving their day to day tasks."/>
+                <meta name="keywords" content="Neighborly, Neighborly Help, neighborly help, neighborlyhelp, neighborhoodhelp, neighborly, delete account"/>
+                <meta name="author" content="Patryk Romaniuk"/> 
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            </Helmet>
             <header>
                 <h1>Delete your account</h1>
             </header>

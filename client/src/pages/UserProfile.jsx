@@ -5,6 +5,7 @@ import { addDescription } from '../actions/auth/addDescription';
 import { getUserTasks } from '../actions/tasks/getActions/getActions';
 import { connect } from 'react-redux';
 import UserProfileTasksWrapper from '../components/UserProfileTasks/UserProfileTasksWrapper';
+import { Helmet } from 'react-helmet';
 
 const UserProfile = ({ auth, addDescription,removeDescription,getUserTasks,taskReducer }) => {
 
@@ -24,6 +25,14 @@ const UserProfile = ({ auth, addDescription,removeDescription,getUserTasks,taskR
     return auth.user !== null && auth.user !== {} && auth.user !== [] && auth.user !== undefined &&
     taskReducer.userTasks !== null && taskReducer.userTasks !== null && taskReducer.userTasks !== [] && taskReducer.userTasks !== {} && (
       <div className="user-profile-page-wrapper">
+            <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>{`${auth.user.name} ${auth.user.lastName}`}</title>
+                    <meta name="description" content={auth.user.description}/>
+                    <meta name="keywords" content="Neighborly, Neighborly Help, neighborly help, neighborlyhelp, neighborhoodhelp, neighborly"/>
+                    <meta name="author" content="Patryk Romaniuk"/> 
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            </Helmet>
             <div className="image-date-section">
                 <img src={auth.user.avatar} alt=""/>
                 <p>Joined at: <Moment format="DD.MM.YYYY">{ auth.user.date }</Moment></p>
