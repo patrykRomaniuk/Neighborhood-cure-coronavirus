@@ -12,7 +12,7 @@ export const changePassword = (passwordForm,newPassword) => async dispatch => {
 
         const body = JSON.stringify({ passwordForm,newPassword });
 
-        const response = await axios.put('http://localhost:5000/api/auth/changePassword',body,config);
+        const response = await axios.put('https://shielded-stream-32476.herokuapp.com/api/auth/changePassword',body,config);
 
         dispatch({
             type: CHANGE_PASSWORD,

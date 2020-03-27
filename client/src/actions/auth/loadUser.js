@@ -7,7 +7,7 @@ export const loadUser = () => async dispatch => {
         setAuthToken(localStorage.getItem('token'));
     }
     try {
-        const response = await axios.get(`http://localhost:5000/api/auth/user`); 
+        const response = await axios.get(`https://shielded-stream-32476.herokuapp.com/api/auth/user`); 
         dispatch({
             type: USER_LOADED,
             payload: response.data

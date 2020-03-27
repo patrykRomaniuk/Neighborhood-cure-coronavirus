@@ -13,7 +13,7 @@ export const loginUser = formData => async dispatch => {
     
         const body = JSON.stringify(formData);
 
-        const response = await axios.post(`http://localhost:5000/api/auth/login`,body,config);
+        const response = await axios.post(`https://shielded-stream-32476.herokuapp.com/api/auth/login`,body,config);
 
         dispatch({
             type: AUTH_FORM_SUCCESS,

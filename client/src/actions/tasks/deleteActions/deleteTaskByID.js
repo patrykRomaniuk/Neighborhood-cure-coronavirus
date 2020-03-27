@@ -4,7 +4,7 @@ import { DELETE_TASK_BY_ID,TASK_ERROR } from '../../constants';
 
 export const deleteTaskByID = task_id => async dispatch => {
     try {
-        const response = await axios.delete(`http://localhost:5000/api/tasks/deleteTaskByID/${task_id}`);
+        const response = await axios.delete(`https://shielded-stream-32476.herokuapp.com/api/tasks/deleteTaskByID/${task_id}`);
         dispatch({
             type: DELETE_TASK_BY_ID,
             payload: response.data
