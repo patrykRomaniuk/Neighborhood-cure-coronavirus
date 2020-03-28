@@ -21,7 +21,7 @@ const DeleteUserAccount = ({ removeUserAccount, auth }) => {
         <div className="delete-user-account">
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>Delete you account</title>
+                <title>Delete your account</title>
                 <meta name="description" content="Website where neighbors can help each other by solving their day to day tasks."/>
                 <meta name="keywords" content="Neighborly, Neighborly Help, neighborly help, neighborlyhelp, neighborhoodhelp, neighborly, delete account"/>
                 <meta name="author" content="Patryk Romaniuk"/> 
