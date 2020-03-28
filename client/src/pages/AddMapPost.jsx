@@ -42,7 +42,7 @@ const AddMapPost = ({ auth: { isAuthenticated },addTask }) => {
                     <meta charSet="utf-8" />
                     <title>Add task on map</title>
                     <meta name="description" content="Website where neighbors can help each other by solving their day to day tasks."/>
-                    <meta name="keywords" content="Neighborly, Neighborly Help, neighborly help, neighborlyhelp, neighborhoodhelp, neighborly, add task to map"/>
+                    <meta name="keywords" content="Neighborly, Neighborly Help, neighborly help, neighborlyhelp, neighborhoodhelp, neighborly, add task to map, neighborly helps"/>
                     <meta name="author" content="Patryk Romaniuk"/> 
                     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 </Helmet>

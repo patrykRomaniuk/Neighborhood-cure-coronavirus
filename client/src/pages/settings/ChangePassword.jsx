@@ -29,7 +29,7 @@ const ChangePassword = ({ changePassword }) => {
                 <meta charSet="utf-8" />
                 <title>Change password</title>
                 <meta name="description" content="Website where neighbors can help each other by solving their day to day tasks."/>
-                <meta name="keywords" content="Neighborly, Neighborly Help, neighborly help, neighborlyhelp, neighborhoodhelp, neighborly, neighborly change password"/>
+                <meta name="keywords" content="Neighborly, Neighborly Help, neighborly help, neighborlyhelp, neighborhoodhelp, neighborly, neighborly change password, neighborly helps"/>
                 <meta name="author" content="Patryk Romaniuk"/> 
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
             </Helmet>

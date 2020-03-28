@@ -34,7 +34,7 @@ const EditTask = ({ editTask,match }) => {
                 <meta charSet="utf-8" />
                 <title>Change Task</title>
                 <meta name="description" content="Edit your task description"/>
-                <meta name="keywords" content="Neighborly, Neighborly Help, neighborly help, neighborlyhelp, neighborhoodhelp, neighborly, edit task neighborly"/>
+                <meta name="keywords" content="Neighborly, Neighborly Help, neighborly help, neighborlyhelp, neighborhoodhelp, neighborly, edit task neighborly, neighborly helps"/>
                 <meta name="author" content="Patryk Romaniuk"/> 
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
             </Helmet>

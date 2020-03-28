@@ -41,7 +41,7 @@ const Login = ({ auth: { isAuthenticated },loginUser }) => {
                 <meta charSet="utf-8" />
                 <title>NeighborlyHelp - Login</title>
                 <meta name="description" content="Website where neighbors can help each other by solving their day to day tasks."/>
-                <meta name="keywords" content="Neighborly, Neighborly Help, neighborly help, neighborlyhelp, neighborhoodhelp, neighborly, login, login neighborly"/>
+                <meta name="keywords" content="Neighborly, Neighborly Help, neighborly help, neighborlyhelp, neighborhoodhelp, neighborly, login, login neighborly, neighborly helps"/>
                 <meta name="author" content="Patryk Romaniuk"/> 
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
             </Helmet>

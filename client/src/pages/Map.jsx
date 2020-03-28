@@ -41,7 +41,7 @@ const Map = ({ taskReducer: { tasks,locationTasks },auth,getTasks,getUserLocatio
                 <meta charSet="utf-8" />
                 <title>Map - NeighborlyHelp</title>
                 <meta name="description" content="Check the tasks in your area"/>
-                <meta name="keywords" content="Neighborly, Neighborly Help, neighborly help, neighborlyhelp, neighborhoodhelp, neighborly, neighborly map, neighborhood help map"/>
+                <meta name="keywords" content="Neighborly, Neighborly Help, neighborly help, neighborlyhelp, neighborhoodhelp, neighborly, neighborly map, neighborhood help map, neighborly helps"/>
                 <meta name="author" content="Patryk Romaniuk"/> 
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
             </Helmet>

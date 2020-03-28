@@ -29,7 +29,7 @@ const UserProfile = ({ auth, addDescription,removeDescription,getUserTasks,taskR
                     <meta charSet="utf-8" />
                     <title>{`${auth.user.name} ${auth.user.lastName}`}</title>
                     <meta name="description" content={auth.user.description}/>
-                    <meta name="keywords" content="Neighborly, Neighborly Help, neighborly help, neighborlyhelp, neighborhoodhelp, neighborly"/>
+                    <meta name="keywords" content="Neighborly, Neighborly Help, neighborly help, neighborlyhelp, neighborhoodhelp, neighborly, neighborly helps"/>
                     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>            
                 </Helmet>
             <div className="image-date-section">
