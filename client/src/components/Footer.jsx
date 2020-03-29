@@ -45,9 +45,9 @@ const Footer = ({ isAuthenticated,logOut }) => {
 
                 <div className="social-media-wrapper">
                     <div className="social-media">
-                        <a aria-label="Check our facebook"  href="https://www.facebook.com/" target="_blank" className="social-href"><i className="fab fa-facebook-f social"></i></a> 
-                        <a aria-label="Check our youtube"  href="https://www.youtube.com/" target="_blank" className="social-href"><i className="fab fa-youtube social"></i></a> 
-                        <a aria-label="Check our instagram"  href="https://www.instagram.com/?hl=en" target="_blank" className="social-href"><i className="fab fa-instagram social"></i></a> 
+                        <a aria-label="Check our facebook"  href="https://www.facebook.com/Neighborly-Helps-101666231493940" target="_blank" className="social-href"><i className="fab fa-facebook-f social"></i></a> 
+                        <a aria-label="Check our youtube"  href="https://www.youtube.com/channel/UCv2Fm2oaoQNqecocGSm0MHg?view_as=subscriber" target="_blank" className="social-href"><i className="fab fa-youtube social"></i></a> 
+                        <a aria-label="Check our instagram"  href="https://www.instagram.com/neighborlyhelps/" target="_blank" className="social-href"><i className="fab fa-instagram social"></i></a> 
                     </div>
                 </div> 
             </div>
