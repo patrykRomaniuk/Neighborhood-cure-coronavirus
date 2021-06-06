@@ -12,7 +12,7 @@ export const addTask = formData => async dispatch => {
     
         const body = JSON.stringify(formData);
 
-        const response = await axios.post(`http:localhost:5000/api/tasks`,body,config);
+        const response = await axios.post(`http://localhost:5000/api/tasks`,body,config);
         
         dispatch({
             type: ADD_TASK,

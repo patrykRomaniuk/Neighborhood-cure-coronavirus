@@ -7,23 +7,24 @@ const { validationResult } = require('express-validator');
 
 module.exports.registerUser = async(req,res) => {
     try {
+        
         let { name,lastName,address,age,zipCode,email,password,phone,country,city,date } = req.body;
         let user = await User.findOne({ email });
         const errors = validationResult(req);
 
-        if(!errors.isEmpty()){
+        if(!errors.isEmpty())
             return res.status(500).json({ errors: errors.array() });
-        }
+        
 
-        if(user){
+        if(user)
             return res.status(401).json("There is already user with this e-mail");
-        }
+        
 
         const avatar = gravatar.url(email,{
             r: 'pg',
             d: 'mm',
             s: '200'
-        });
+        })
 
         const location = {
             address,
@@ -42,7 +43,7 @@ module.exports.registerUser = async(req,res) => {
             date,
             location,
             avatar
-        });
+        })
 
         const salt = await bcryptjs.genSalt(10);
 
@@ -65,7 +66,6 @@ module.exports.registerUser = async(req,res) => {
                 res.json({ token });
             }
         )
-
     } catch (error) {
         console.log(error.message);
         return res.status(500).json({ msg: "Server Error..." });

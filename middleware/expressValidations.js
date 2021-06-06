@@ -13,7 +13,6 @@ module.exports.registerValidations = [
         check('age', 'Please type proper name').isNumeric(),
         check('password', 'Password has to have at least 3 letters').isLength({ min: 3 }),
         check('email','Type proper e-mail').isEmail(),
-        check('phone','Please type proper phone number').not().isEmpty(),
         check('country', 'Country is required').not().isEmpty(),
         check('city', 'City is required').not().isEmpty()
     ]
