@@ -10,7 +10,7 @@ export const editTask = (newDescription, task_id) => async dispatch => {
         };
         const body = JSON.stringify({ newDescription });
 
-        const response =  await axios.put(`https://shielded-stream-32476.herokuapp.com/api/tasks/changeTaskDescription/${task_id}`,body,config);
+        const response =  await axios.put(`http:localhost:5000/api/tasks/changeTaskDescription/${task_id}`,body,config);
         dispatch({
             type: EDIT_TASK,
             payload: response.data

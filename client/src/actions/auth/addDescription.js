@@ -9,7 +9,7 @@ export const addDescription = description => async dispatch => {
             }
         };
         const body = JSON.stringify({ description });
-        const response = await axios.put(`https://shielded-stream-32476.herokuapp.com/api/auth/put_description`,body,config);
+        const response = await axios.put(`http:localhost:5000/api/auth/put_description`,body,config);
         dispatch({
             type: ADD_DESCRIPTION,
             payload: response.data

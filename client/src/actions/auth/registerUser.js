@@ -11,7 +11,7 @@ export const registerUser = formData => async dispatch => {
         };
     
         const body = JSON.stringify(formData);
-        const response = await axios.post(`https://shielded-stream-32476.herokuapp.com/api/auth/register`,body,config);
+        const response = await axios.post(`http:localhost:5000/api/auth/register`,body,config);
         
         dispatch({
             type: AUTH_FORM_SUCCESS,
